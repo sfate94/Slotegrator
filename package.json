@@ -1,0 +1,21 @@
+{
+  "name": "slotegrator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cypress open",
+    "test": "cypress run"
+  },
+  "author": "Artsemi Nagorny",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "cypress-image-diff-js": "^1.15.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/integration/stepDefinitions"
+  }
+}
