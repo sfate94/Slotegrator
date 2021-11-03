@@ -1,0 +1,7 @@
+/.idea
+/vendor/
+cypress-visual-report
+cypress-visual-screenshots
+cypress/screenshots
+cypress/videos
+node_modules
