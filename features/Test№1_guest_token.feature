@@ -2,7 +2,7 @@ Feature: Getting token for guest
 
     Scenario: Getting token for guest
         Given the "Content-Type" request header is "application/json"
-        And I am authenticating as 'someclient' with password 'anditssecret'
+        And the "Authorization" request header is "Basic ZnJvbnRfMmQ2YjBhODM5MTc0MmY1ZDc4OWQ3ZDkxNTc1NWUwOWU6"
         And the request body is:
         """
         {
@@ -16,8 +16,7 @@ Feature: Getting token for guest
         """
         {
           "token_type":"Bearer",
-          "expires_in":3600,
-          "access_token":"2YotnFZFEjr1zCsicMWpAA",
-          "refresh_token":"def50200fcc006121b6a068eced57
+          "expires_in":"@regExp(/.*/)",
+          "access_token":"@regExp(/.*/)"
         }
         """

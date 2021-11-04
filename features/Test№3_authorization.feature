@@ -2,13 +2,13 @@ Feature: Log in with a created player
 
     Scenario: Try to log in with a created player
         Given the "Content-Type" request header is "application/json"
-        And I am authenticating as 'someclient' with password 'anditssecret'
+        And the "Authorization" request header is "Basic ZnJvbnRfMmQ2YjBhODM5MTc0MmY1ZDc4OWQ3ZDkxNTc1NWUwOWU6"
         And the request body is:
         """
         {
-          "grant_type":"client_credentials",
-          "username":"johndoe",
-          "password":"am9obmRvZTEyMw=="
+          "grant_type":"password",
+          "username":"artemnagorn",
+          "password":"bmFnb3JueTE="
         }
         """
         When I request "http://test-api.d6.dev.devcaz.com/v2/oauth2/token" using HTTP "POST"
@@ -17,8 +17,8 @@ Feature: Log in with a created player
         """
         {
           "token_type":"Bearer",
-          "expires_in":3600,
-          "access_token":"2YotnFZFEjr1zCsicMWpAA",
-          "refresh_token":"def50200fcc006121b6a068eced57
+          "expires_in":"@regExp(/.*/)",
+          "access_token":"@regExp(/.*/)",
+          "refresh_token":"@regExp(/.*/)"
         }
         """

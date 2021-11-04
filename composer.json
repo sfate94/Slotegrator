@@ -3,5 +3,8 @@
         "imbo/behat-api-extension": "^3.0",
         "friends-of-behat/symfony-extension": "^2.2",
         "behat/behat": "^3.10"
+    },
+    "require": {
+        "fakerphp/faker": "^1.16"
     }
 }
